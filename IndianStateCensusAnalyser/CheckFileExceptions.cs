@@ -26,7 +26,6 @@ namespace IndianStateCensusAnalyser
             {
                 throw new CensusAnalyserException("File Path is Improper", CensusAnalyserException.ExceptionType.INVALID_FILE_TYPE);
             }
-
         }
     }
 }
