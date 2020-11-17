@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IndianStateCensusAnalyser.DTO;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,7 +10,7 @@ namespace IndianStateCensusAnalyser
         /// <summary>
         /// The data map
         /// </summary>
-        //creating a dictionary with string as key and CensusDto as value
+        //creating a dictionary with string as key and CensusDto as value  and to store data from csv
         public Dictionary<string, CensusDTO> dataMap;
 
         /// <summary>
@@ -20,7 +21,7 @@ namespace IndianStateCensusAnalyser
         /// <param name="header">The header.</param>
         /// <returns></returns>
         /// <exception cref="IndianStateCensusAnalyser.CensusAnalyserException">No such country</exception>
-        //creating a dictionary with string as key and CensusDto as value and loaddictionary is passed with parameters
+        //creating a dictionary with string as key and CensusDto to store data from csv as value and loaddictionary is passed with parameters
         public Dictionary<string, CensusDTO> LoadDictionary(string path, StateCensusAnalyser.Country country, string header)
         {
             if (country != StateCensusAnalyser.Country.INDIA)

@@ -20,6 +20,8 @@ namespace IndianStateCensusAnalyser
         {
             //reads all the lines from that specified file
             records = File.ReadAllLines(path);
+            //if record doesn't matches with header
+            //then exception will be thrown
             if (records[0] != header)
             {
                 throw new CensusAnalyserException("Header is Invalid", CensusAnalyserException.ExceptionType.INCORRECT_HEADER);
