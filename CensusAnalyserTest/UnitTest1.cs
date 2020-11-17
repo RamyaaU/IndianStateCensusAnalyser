@@ -22,14 +22,8 @@ namespace CensusAnalyserTest
         //wrong header 
         string indianStateCensusDataWrongHeader = @"C:\Users\admin\source\repos\IndianStateCensusAnalyser\CensusAnalyserTest\CSVFiles\WrongIndiaStateCensusData - WrongIndiaStateCensusData.csv";
 
-        /// <summary>
-        /// Gets the state census analyser.
-        /// </summary>
-        /// <value>
-        /// The state census analyser.
-        /// </value>
-        public StateCensusAnalyser stateCensusAnalyser { get; private set; }
-        private Dictionary<string, CensusDTO> stateDataRecord;
+        StateCensusAnalyser stateCensusAnalyser;
+        Dictionary<string, CensusDTO> stateDataRecord;
 
         /// <summary>
         /// Setups this instance.
