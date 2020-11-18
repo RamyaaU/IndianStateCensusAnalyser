@@ -29,7 +29,7 @@ namespace IndianStateCensusAnalyser
         public Dictionary<string, CensusDTO> LoadCensusData(string csvPath, Country country, string csvHeader)
         {
             //checks the exception
-            CheckFileExceptions.CheckExceptions(csvPath, country);
+            CensusAnalyserException.CheckExceptions(csvPath, country);
             censusDataMap = new CensusAnalyser().LoadDictionary(csvPath, country, csvHeader);
             return censusDataMap;
         }
