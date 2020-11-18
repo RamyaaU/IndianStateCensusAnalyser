@@ -17,7 +17,7 @@ namespace IndianStateCensusAnalyser
         /// <param name="path">The path.</param>
         /// <param name="header">The header.</param>
         /// <returns></returns>
-        /// <exception cref="IndianStateCensusAnalyser.CensusAnalyserException">Delimiter is Invalid</exception>
+        /// <exception cref="IndianStateCensusAnalyser.CSVAdapterFactory">Delimiter is Invalid</exception>
         //creating a dictionary by passing string as key and censusdto as value and to store data from csv
         //and gets the data from dictionary by parameters passed
         public Dictionary<string, CensusDTO> GetDictionary(string path, string header)
@@ -32,7 +32,7 @@ namespace IndianStateCensusAnalyser
                 //then it throws an exception
                 if (records[i].Contains(",") == false)
                 {
-                    throw new CensusAnalyserException("Delimiter is Invalid", CensusAnalyserException.ExceptionType.INCORRECT_DELIMITER);
+                    throw new CSVAdapterFactory("Delimiter is Invalid", CSVAdapterFactory.ExceptionType.INCORRECT_DELIMITER);
                 }
                 //here data is split using comma
                 string[] info = records[i].Split(",");

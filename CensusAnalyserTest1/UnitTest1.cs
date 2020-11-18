@@ -84,9 +84,9 @@ namespace CensusAnalyserTest1
             {
                 stateCodeRecord = stateCensusAnalyser.LoadCensusData(indianStateCodeWrongCSVPath, Country.INDIA, indianStateCodeHeader);
             }
-            catch (CensusAnalyserException e)
+            catch (CSVAdapterFactory e)
             {
-                Assert.AreEqual(CensusAnalyserException.ExceptionType.FILE_NOT_FOUND, e.eType);
+                Assert.AreEqual(CSVAdapterFactory.ExceptionType.FILE_NOT_FOUND, e.eType);
             }
         }
 
@@ -101,9 +101,9 @@ namespace CensusAnalyserTest1
             {
                 stateCodeRecord = stateCensusAnalyser.LoadCensusData(indianStateCodeWrongFileType, Country.INDIA, indianStateCodeHeader);
             }
-            catch (CensusAnalyserException e)
+            catch (CSVAdapterFactory e)
             {
-                Assert.AreEqual(CensusAnalyserException.ExceptionType.INVALID_FILE_TYPE, e.eType);
+                Assert.AreEqual(CSVAdapterFactory.ExceptionType.INVALID_FILE_TYPE, e.eType);
             }
         }
 
@@ -118,9 +118,9 @@ namespace CensusAnalyserTest1
             {
                 stateCodeRecord = stateCensusAnalyser.LoadCensusData(indianStateStateCodeDelimeter, Country.INDIA, indianStateCodeHeader);
             }
-            catch (CensusAnalyserException e)
+            catch (CSVAdapterFactory e)
             {
-                Assert.AreEqual(CensusAnalyserException.ExceptionType.INCORRECT_DELIMITER, e.eType);
+                Assert.AreEqual(CSVAdapterFactory.ExceptionType.INCORRECT_DELIMITER, e.eType);
             }
         }
 
@@ -135,9 +135,9 @@ namespace CensusAnalyserTest1
             {
                 stateCodeRecord = stateCensusAnalyser.LoadCensusData(indianStateCodeWrongHeader, Country.INDIA, indianStateCodeHeader);
             }
-            catch (CensusAnalyserException e)
+            catch (CSVAdapterFactory e)
             {
-                Assert.AreEqual(CensusAnalyserException.ExceptionType.INCORRECT_HEADER, e.eType);
+                Assert.AreEqual(CSVAdapterFactory.ExceptionType.INCORRECT_HEADER, e.eType);
             }
         }
     }

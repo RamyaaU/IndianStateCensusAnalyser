@@ -15,7 +15,7 @@ namespace IndianStateCensusAnalyser
         /// <param name="path">The path.</param>
         /// <param name="header">The header.</param>
         /// <returns></returns>
-        /// <exception cref="IndianStateCensusAnalyser.CensusAnalyserException">Header is Invalid</exception>
+        /// <exception cref="IndianStateCensusAnalyser.CSVAdapterFactory">Header is Invalid</exception>
         public string[] GetRecords(string path, string header)
         {
             //reads all the lines from that specified file
@@ -24,7 +24,7 @@ namespace IndianStateCensusAnalyser
             //then exception will be thrown
             if (records[0] != header)
             {
-                throw new CensusAnalyserException("Header is Invalid", CensusAnalyserException.ExceptionType.INCORRECT_HEADER);
+                throw new CSVAdapterFactory("Header is Invalid", CSVAdapterFactory.ExceptionType.INCORRECT_HEADER);
             }
             return records;
         }

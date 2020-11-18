@@ -11,7 +11,7 @@ namespace IndianStateCensusAnalyser
         /// Checks the exceptions.
         /// </summary>
         /// <param name="csvPath">The CSV path.</param>
-        /// <exception cref="IndianStateCensusAnalyser.CensusAnalyserException">
+        /// <exception cref="IndianStateCensusAnalyser.CSVAdapterFactory">
         /// File Does Not Exist
         /// or
         /// File Path is Improper
@@ -20,11 +20,11 @@ namespace IndianStateCensusAnalyser
         {
             if (File.Exists(csvPath) == false)
             {
-                throw new CensusAnalyserException("File Does Not Exist", CensusAnalyserException.ExceptionType.FILE_NOT_FOUND);
+                throw new CSVAdapterFactory("File Does Not Exist", CSVAdapterFactory.ExceptionType.FILE_NOT_FOUND);
             }
             if (Path.GetExtension(csvPath) != ".csv")
             {
-                throw new CensusAnalyserException("File Path is Improper", CensusAnalyserException.ExceptionType.INVALID_FILE_TYPE);
+                throw new CSVAdapterFactory("File Path is Improper", CSVAdapterFactory.ExceptionType.INVALID_FILE_TYPE);
             }
         }
     }
