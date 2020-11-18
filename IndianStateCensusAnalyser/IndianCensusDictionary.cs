@@ -24,7 +24,7 @@ namespace IndianStateCensusAnalyser
         {
             dataMap = new Dictionary<string, CensusDTO>();
             //to get records from csv file
-            records = new GetCSVRecords().GetRecords(path, header);
+            records = new CensusAnalyserException().GetRecords(path, header);
             //to iterate in records i is used as an variable 
             for (int i = 1; i < records.Length; i++)
             {
