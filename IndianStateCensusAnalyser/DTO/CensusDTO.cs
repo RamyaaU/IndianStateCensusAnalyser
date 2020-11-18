@@ -6,37 +6,43 @@ namespace IndianStateCensusAnalyser.DTO
 {
     public class CensusDTO
     {
-        public int srNo;
+        public int serialNumber;
         public string stateName;
+        public string state;
         public int tin;
         public string stateCode;
-        public string state;
         public long population;
         public long area;
         public long density;
+        public long housingUnits;
+        public double totalArea;
+        public double waterArea;
+        public double landArea;
+        public double populationDensity;
+        public double housingDensity;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CensusDTO"/> class.
+        /// constructor to define the necessary attribute for the Indian State census Data.
         /// </summary>
-        /// <param name="stateCodeDAO">The state code DAO.</param>
-        public CensusDTO(StateCodeDAO stateCodeDAO)
+        /// <param name="stateCodeDao">The state code DAO.</param>
+        public CensusDTO(StateCodeDAO stateCodeDao)
         {
-            this.srNo = stateCodeDAO.srNo;
-            this.stateName = stateCodeDAO.stateName;
-            this.tin = stateCodeDAO.tin;
-            this.stateCode = stateCodeDAO.stateCode;
+            this.serialNumber = stateCodeDao.serialNumber;
+            this.stateName = stateCodeDao.stateName;
+            this.tin = stateCodeDao.tin;
+            this.stateCode = stateCodeDao.stateCode;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CensusDTO"/> class.
+        ///  constructor to define the necessary attribute for the Indian State Code Data
         /// </summary>
-        /// <param name="censusDataDAO">The census data DAO.</param>
-        public CensusDTO(CensusDataDAO censusDataDAO)
+        /// <param name="censusDataDao">The census data DAO.</param>
+        public CensusDTO(CensusDataDAO censusDataDao)
         {
-            this.state = censusDataDAO.state;
-            this.population = censusDataDAO.population;
-            this.area = censusDataDAO.area;
-            this.density = censusDataDAO.density;
+            this.state = censusDataDao.state;
+            this.population = censusDataDao.population;
+            this.area = censusDataDao.area;
+            this.density = censusDataDao.density;
         }
     }
 }
