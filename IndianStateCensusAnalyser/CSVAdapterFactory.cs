@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IndianStateCensusAnalyser.DTO;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

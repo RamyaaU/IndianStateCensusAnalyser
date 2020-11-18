@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+using System.Runtime.Serialization;
 
 namespace IndianStateCensusAnalyser
 {
@@ -9,12 +7,12 @@ namespace IndianStateCensusAnalyser
     {
         public enum ExceptionType
         {
-            FILE_NOT_FOUND, INVALID_FILE_TYPE, 
+            FILE_NOT_FOUND, INVALID_FILE_TYPE,
             INCORRECT_DELIMITER, INCORRECT_HEADER, NO_SUCH_COUNTRY
         }
 
         /// <summary>
-        /// The exception type 'e'
+        /// The exception type
         /// </summary>
         public ExceptionType eType;
 

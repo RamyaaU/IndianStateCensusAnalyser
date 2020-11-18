@@ -7,6 +7,19 @@ namespace IndianStateCensusAnalyser
 {
     public abstract class CensusAdapter
     {
+        /// <summary>
+        /// Gets the census data.
+        /// </summary>
+        /// <param name="csvFilePath">The CSV file path.</param>
+        /// <param name="dataHeaders">The data headers.</param>
+        /// <returns></returns>
+        /// <exception cref="IndianStateCensusAnalyser.CensusAnalyserException">
+        /// File Not Found
+        /// or
+        /// Invalid File Type
+        /// or
+        /// Incorrect header in Data
+        /// </exception>
         protected string[] GetCensusData(string csvFilePath, string dataHeaders)
         {
             string[] censusData;
