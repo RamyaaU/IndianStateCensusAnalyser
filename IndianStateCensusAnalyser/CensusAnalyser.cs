@@ -14,7 +14,6 @@ namespace IndianStateCensusAnalyser
             INDIA,
             US,
         }
-
         // dictionary to store the data from the CSV files keeping string as key
         // censusuDto as value
         Dictionary<string, CensusDTO> dataMap;
