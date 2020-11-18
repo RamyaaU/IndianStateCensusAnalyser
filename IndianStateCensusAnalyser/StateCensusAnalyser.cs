@@ -30,7 +30,7 @@ namespace IndianStateCensusAnalyser
         {
             //checks the exception
             CheckFileExceptions.CheckExceptions(csvPath, country);
-            censusDataMap = new CensusDataDictionary().LoadDictionary(csvPath, country, csvHeader);
+            censusDataMap = new CensusAnalyser().LoadDictionary(csvPath, country, csvHeader);
             return censusDataMap;
         }
     }
