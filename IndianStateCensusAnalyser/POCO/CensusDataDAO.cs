@@ -7,9 +7,9 @@ namespace IndianStateCensusAnalyser.POCO
     public class CensusDataDAO
     {
         public string state;
-        public long population;
-        public long area;
-        public long density;
+        public string population;
+        public string area;
+        public string density;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CensusDataDAO"/> class.
@@ -21,9 +21,9 @@ namespace IndianStateCensusAnalyser.POCO
         public CensusDataDAO(string state, string population, string area, string density)
         {
             this.state = state;
-            this.population = Convert.ToUInt32(population);
-            this.area = Convert.ToUInt32(area);
-            this.density = Convert.ToUInt32(density);
+            this.population = population;
+            this.area = area;
+            this.density = density;
         }
     }
 }
