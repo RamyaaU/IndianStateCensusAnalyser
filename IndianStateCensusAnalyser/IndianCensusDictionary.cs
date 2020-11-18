@@ -21,7 +21,7 @@ namespace IndianStateCensusAnalyser
         /// <param name="path">The path.</param>
         /// <param name="header">The header.</param>
         /// <returns></returns>
-        /// <exception cref="CensusAnalyserException">Delimiter is Invalid</exception>
+        /// <exception cref="CSVAdapterFactory">Delimiter is Invalid</exception>
         public Dictionary<string, CensusDTO> GetDictionary(string path, string header)
         {
             //creates a dictionary keeping as string as key and CensusDTO as value
@@ -32,7 +32,7 @@ namespace IndianStateCensusAnalyser
             {
                 if (records[i].Contains(",") == false)
                 {
-                    throw new CensusAnalyserException("Delimiter is Invalid", CensusAnalyserException.ExceptionType.INCORRECT_DELIMITER);
+                    throw new CSVAdapterFactory("Delimiter is Invalid", CSVAdapterFactory.ExceptionType.INCORRECT_DELIMITER);
                 }
                 string[] info = records[i].Split(",");
                 censusDataMap.Add(info[1], new CensusDTO(new POCO.CensusDataDAO(info[0], info[1], info[2], info[3])));
