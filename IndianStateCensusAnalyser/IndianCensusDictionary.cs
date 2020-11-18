@@ -27,7 +27,7 @@ namespace IndianStateCensusAnalyser
             //creates a dictionary keeping as string as key and CensusDTO as value
             censusDataMap = new Dictionary<string, CensusDTO>();
             //gets the records
-            records = new GetCSVRecords().GetRecords(path, header);
+            records = new CensusAdapter().GetRecords(path, header);
             for (int i = 1; i < records.Length; i++)
             {
                 if (records[i].Contains(",") == false)
